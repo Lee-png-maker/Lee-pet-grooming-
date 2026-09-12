@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lee Tiling & Ceilings | Professional Tiling & Ceiling Services</title>
+<title>Lee Pet Grooming | Professional Pet Grooming South Africa</title>
 
-<meta name="description" content="Lee Tiling & Ceilings - Professional floor tiling, wall tiling, bathroom tiling, kitchen tiling, ceilings, repairs and finishing services. WhatsApp 068 868 5355.">
+<meta name="description"
+content="Lee Pet Grooming provides professional dog and cat grooming, bathing, trimming, nail care and pet hygiene services. Call or WhatsApp 068 868 5355.">
 
+<meta name="keywords"
+content="Lee Pet Grooming, dog grooming, cat grooming, pet grooming South Africa, mobile pet grooming, dog bath, dog haircut">
+
+<meta name="theme-color" content="#7c3aed">
+
+<!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
 <style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 *{
 margin:0;
@@ -24,21 +44,39 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7fa;
-color:#17202a;
+font-family:"Poppins",Arial,sans-serif;
+background:#fffaf7;
+color:#24212a;
 line-height:1.6;
+overflow-x:hidden;
 }
 
 :root{
---blue:#0A66C2;
---blue2:#084b8f;
---dark:#101820;
---dark2:#182632;
---white:#fff;
---grey:#697581;
---border:#dfe5ea;
+
+--purple:#7c3aed;
+--purple-dark:#5b21b6;
+--purple-light:#ede9fe;
+
+--pink:#ec4899;
+--pink-light:#fce7f3;
+
+--orange:#f97316;
+--orange-light:#ffedd5;
+
+--cream:#fffaf7;
+
+--dark:#211b2d;
+--dark2:#30243d;
+
+--text:#24212a;
+--grey:#6f6877;
+
+--white:#ffffff;
+
 --green:#25D366;
+
+--border:#eadfe8;
+
 }
 
 a{
@@ -46,785 +84,1882 @@ text-decoration:none;
 color:inherit;
 }
 
+button,
+input,
+select,
+textarea{
+font-family:inherit;
+}
+
 img{
 max-width:100%;
 display:block;
 }
 
-/* HEADER */
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
+
 position:sticky;
+
 top:0;
+
 z-index:1000;
-background:#101820;
-box-shadow:0 3px 15px rgba(0,0,0,.2);
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 3px 20px rgba(40,20,50,.08);
+
 }
 
 .navbar{
+
 max-width:1200px;
+
 margin:auto;
+
 padding:15px 20px;
+
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
+
 }
 
 .logo{
-color:white;
-font-size:22px;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:25px;
+
 font-weight:800;
+
+color:var(--dark);
+
+}
+
+.logo-icon{
+
+width:45px;
+
+height:45px;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,var(--purple),var(--pink));
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:23px;
+
+box-shadow:0 8px 18px rgba(124,58,237,.25);
+
 }
 
 .logo span{
-color:#55aaff;
+
+color:var(--purple);
+
 }
 
 .nav-links{
+
 display:flex;
+
 align-items:center;
-gap:18px;
+
+gap:20px;
+
 }
 
 .nav-links a{
-color:white;
+
 font-size:14px;
+
+font-weight:600;
+
+color:#4b4454;
+
+transition:.3s;
+
 }
 
 .nav-links a:hover{
-color:#55aaff;
+
+color:var(--purple);
+
 }
 
-.whatsapp-nav{
-background:#25D366 !important;
-color:white !important;
-padding:10px 15px;
-border-radius:6px;
-font-weight:bold;
+.nav-phone{
+
 display:flex;
+
 align-items:center;
+
 gap:7px;
+
 }
 
-.whatsapp-nav:hover{
+.nav-whatsapp{
+
+background:var(--green);
+
+color:white !important;
+
+padding:10px 15px;
+
+border-radius:30px;
+
+display:flex;
+
+align-items:center;
+
+gap:7px;
+
+box-shadow:0 5px 15px rgba(37,211,102,.2);
+
+}
+
+.nav-whatsapp:hover{
+
 background:#1ebe5d !important;
+
+color:white !important;
+
 }
 
 .menu{
+
 display:none;
-color:white;
-font-size:28px;
+
+font-size:27px;
+
 cursor:pointer;
+
+color:var(--dark);
+
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
+
+position:relative;
+
 min-height:88vh;
+
 display:flex;
+
 align-items:center;
-color:white;
+
+overflow:hidden;
 
 background:
-linear-gradient(rgba(8,18,28,.75),rgba(8,18,28,.78)),
-url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
+
+linear-gradient(
+90deg,
+rgba(40,20,55,.93),
+rgba(65,30,85,.76),
+rgba(124,58,237,.42)
+),
+
+url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=2000&q=90")
+
 center/cover;
+
+color:white;
+
 }
 
 .hero-content{
+
 max-width:1200px;
+
 width:100%;
+
 margin:auto;
-padding:90px 20px;
+
+padding:100px 20px;
+
+position:relative;
+
+z-index:2;
+
 }
 
-.badge{
-color:#66b5ff;
+.hero-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+background:rgba(255,255,255,.13);
+
+border:1px solid rgba(255,255,255,.25);
+
+padding:9px 15px;
+
+border-radius:30px;
+
 font-size:13px;
-font-weight:bold;
-text-transform:uppercase;
-letter-spacing:3px;
-margin-bottom:20px;
+
+font-weight:600;
+
+margin-bottom:22px;
+
 }
 
 .hero h1{
-max-width:900px;
-font-size:clamp(42px,7vw,78px);
-line-height:1.05;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:clamp(48px,7vw,82px);
+
+line-height:.98;
+
+max-width:850px;
+
 margin-bottom:25px;
+
 }
 
 .hero h1 span{
-color:#55aaff;
+
+color:#f9a8d4;
+
 }
 
 .hero p{
-max-width:700px;
+
+max-width:690px;
+
 font-size:18px;
-color:#e4ebf1;
+
+color:#f5edf8;
+
 margin-bottom:30px;
+
 }
 
-.buttons{
+.hero-buttons{
+
 display:flex;
+
 gap:12px;
+
 flex-wrap:wrap;
+
 }
 
 .btn{
+
 display:inline-flex;
+
 align-items:center;
+
 justify-content:center;
+
 gap:9px;
-padding:14px 24px;
-border-radius:6px;
-font-weight:bold;
+
+padding:14px 22px;
+
 border:none;
+
+border-radius:30px;
+
+font-weight:700;
+
 cursor:pointer;
+
 transition:.3s;
+
 }
 
-.btn-blue{
-background:var(--blue);
+.btn-purple{
+
+background:var(--purple);
+
 color:white;
+
+box-shadow:0 8px 22px rgba(124,58,237,.25);
+
 }
 
-.btn-blue:hover{
-background:var(--blue2);
-transform:translateY(-2px);
+.btn-purple:hover{
+
+background:var(--purple-dark);
+
+transform:translateY(-3px);
+
+}
+
+.btn-pink{
+
+background:var(--pink);
+
+color:white;
+
+box-shadow:0 8px 22px rgba(236,72,153,.25);
+
+}
+
+.btn-pink:hover{
+
+background:#db2777;
+
+transform:translateY(-3px);
+
 }
 
 .btn-whatsapp{
-background:#25D366;
+
+background:var(--green);
+
 color:white;
+
+box-shadow:0 8px 22px rgba(37,211,102,.22);
+
 }
 
 .btn-whatsapp:hover{
+
 background:#1ebe5d;
-transform:translateY(-2px);
+
+transform:translateY(-3px);
+
 }
 
-.btn-outline{
-border:1px solid white;
-color:white;
-}
+.btn-white{
 
-.btn-outline:hover{
 background:white;
-color:#101820;
+
+color:var(--purple);
+
 }
 
-/* GENERAL */
+.btn-white:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 section{
-padding:80px 20px;
+
+padding:85px 20px;
+
 }
 
 .container{
+
 max-width:1200px;
+
 margin:auto;
+
 }
 
 .section-title{
+
 text-align:center;
-margin-bottom:45px;
+
+margin-bottom:48px;
+
 }
 
 .section-title .small{
-color:var(--blue);
+
+display:inline-block;
+
+color:var(--purple);
+
 font-size:12px;
-font-weight:bold;
+
+font-weight:800;
+
 letter-spacing:3px;
+
 text-transform:uppercase;
+
+margin-bottom:5px;
+
 }
 
 .section-title h2{
-font-size:42px;
-margin:8px 0 12px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:45px;
+
+line-height:1.1;
+
+margin:5px 0 12px;
+
 }
 
 .section-title p{
+
 max-width:700px;
+
 margin:auto;
+
 color:var(--grey);
+
 }
 
-/* ABOUT */
+
+/* =========================================================
+   QUICK CONTACT STRIP
+========================================================= */
+
+.contact-strip{
+
+background:var(--purple);
+
+color:white;
+
+padding:18px 20px;
+
+}
+
+.contact-strip-inner{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.contact-strip a{
+
+font-weight:700;
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+.contact-strip .whatsapp{
+
+color:#b7ffd0;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about{
+
 background:white;
+
 }
 
 .about-grid{
+
 display:grid;
+
 grid-template-columns:1fr 1fr;
-gap:55px;
+
+gap:60px;
+
 align-items:center;
+
 }
 
 .about-image{
-min-height:480px;
+
+min-height:510px;
+
+border-radius:30px;
 
 background:
-url("https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1100&q=85")
+
+url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1100&q=90")
+
 center/cover;
+
+box-shadow:0 20px 50px rgba(45,25,55,.13);
+
+position:relative;
+
+}
+
+.about-badge{
+
+position:absolute;
+
+bottom:25px;
+
+left:25px;
+
+background:white;
+
+padding:15px 18px;
+
+border-radius:18px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+font-weight:700;
+
+color:var(--dark);
+
+}
+
+.about-text .small{
+
+color:var(--purple);
+
+font-size:12px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
 }
 
 .about-text h2{
-font-size:42px;
-margin-bottom:20px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:45px;
+
+line-height:1.1;
+
+margin:8px 0 18px;
+
 }
 
 .about-text p{
+
 color:var(--grey);
-margin-bottom:17px;
+
+margin-bottom:16px;
+
 }
 
 .highlight{
-background:#eef6fd;
-border-left:4px solid var(--blue);
-padding:16px 18px;
-font-weight:bold;
-margin-top:20px;
+
+background:var(--purple-light);
+
+border-left:5px solid var(--purple);
+
+padding:17px 18px;
+
+border-radius:0 15px 15px 0;
+
+font-weight:700;
+
+margin:22px 0;
+
 }
 
-/* SERVICES */
+
+/* =========================================================
+   SERVICES
+========================================================= */
 
 .services{
-background:#f6f8fa;
+
+background:#fff8fc;
+
 }
 
 .service-grid{
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:22px;
+
 }
 
-.card{
+.service-card{
+
 background:white;
+
 padding:30px;
+
 border:1px solid var(--border);
+
+border-radius:24px;
+
 transition:.3s;
+
+position:relative;
+
+overflow:hidden;
+
 }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+.service-card:before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:linear-gradient(
+90deg,
+var(--purple),
+var(--pink)
+);
+
 }
 
-.icon{
-font-size:35px;
-margin-bottom:15px;
+.service-card:hover{
+
+transform:translateY(-7px);
+
+box-shadow:0 18px 40px rgba(70,30,80,.10);
+
 }
 
-.card h3{
-font-size:21px;
-margin-bottom:8px;
+.service-icon{
+
+width:58px;
+
+height:58px;
+
+border-radius:18px;
+
+background:var(--purple-light);
+
+color:var(--purple);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:25px;
+
+margin-bottom:18px;
+
 }
 
-.card p{
+.service-card h3{
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:23px;
+
+margin-bottom:7px;
+
+}
+
+.service-card p{
+
 color:var(--grey);
+
 font-size:14px;
+
 }
 
-/* FEATURES */
 
-.tiling{
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.feature{
+
 background:white;
+
 }
 
 .feature-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:55px;
-align-items:center;
-}
 
-.feature-image,
-.ceiling-image{
-min-height:500px;
-background-position:center;
-background-size:cover;
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
 }
 
 .feature-image{
-background-image:
-url("https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1100&q=85");
-}
 
-.ceiling-image{
-background-image:
-url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1100&q=85");
+min-height:520px;
+
+border-radius:30px;
+
+background:
+
+url("https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1100&q=90")
+
+center/cover;
+
+box-shadow:0 20px 50px rgba(45,25,55,.13);
+
 }
 
 .feature-text .small{
-color:var(--blue);
-text-transform:uppercase;
-letter-spacing:3px;
-font-weight:bold;
+
+color:var(--pink);
+
 font-size:12px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
 }
 
 .feature-text h2{
-font-size:44px;
-margin:10px 0 18px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:45px;
+
+line-height:1.1;
+
+margin:8px 0 18px;
+
 }
 
 .feature-text p{
+
 color:var(--grey);
+
 margin-bottom:20px;
+
 }
 
-.list{
+.check-list{
+
 display:grid;
+
 gap:12px;
+
+margin-bottom:25px;
+
 }
 
-.list-item{
+.check{
+
 display:flex;
+
+align-items:center;
+
 gap:10px;
+
+font-weight:600;
+
 }
 
-.tick{
-color:var(--blue);
-font-weight:bold;
+.check i{
+
+color:var(--purple);
+
 }
 
-/* CEILINGS */
 
-.ceilings{
-background:#182632;
+/* =========================================================
+   MOBILE GROOMING
+========================================================= */
+
+.mobile-grooming{
+
+background:
+
+linear-gradient(
+135deg,
+#5b21b6,
+#7c3aed
+);
+
 color:white;
+
 }
 
-.ceilings .feature-text p{
-color:#c8d1d9;
-}
+.mobile-grid{
 
-.ceilings .feature-text h2{
-color:white;
-}
-
-/* TYPES */
-
-.tile-types{
-background:#eef2f5;
-}
-
-.type-grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
 }
 
-.type{
+.mobile-text .small{
+
+color:#f9a8d4;
+
+font-size:12px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+}
+
+.mobile-text h2{
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:46px;
+
+line-height:1.1;
+
+margin:8px 0 18px;
+
+}
+
+.mobile-text p{
+
+color:#eee5f8;
+
+margin-bottom:20px;
+
+}
+
+.mobile-list{
+
+display:grid;
+
+gap:12px;
+
+margin-bottom:25px;
+
+}
+
+.mobile-list div{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.mobile-list i{
+
+color:#f9a8d4;
+
+}
+
+.mobile-image{
+
+min-height:500px;
+
+border-radius:30px;
+
+background:
+
+url("https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1100&q=90")
+
+center/cover;
+
+}
+
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.pricing{
+
+background:#fff8fc;
+
+}
+
+.price-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+}
+
+.price-card{
+
 background:white;
+
 border:1px solid var(--border);
-padding:27px 20px;
+
+border-radius:25px;
+
+padding:30px;
+
 text-align:center;
+
+transition:.3s;
+
 }
 
-.type-icon{
+.price-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 40px rgba(70,30,80,.10);
+
+}
+
+.price-icon{
+
 font-size:35px;
+
 margin-bottom:10px;
+
 }
 
-.type h3{
-margin-bottom:7px;
+.price-card h3{
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:24px;
+
 }
 
-.type p{
+.price{
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:38px;
+
+font-weight:800;
+
+color:var(--purple);
+
+margin:10px 0;
+
+}
+
+.price small{
+
+font-family:"Poppins",sans-serif;
+
+font-size:12px;
+
 color:var(--grey);
-font-size:13px;
+
 }
 
-/* WHY */
+.price-card p{
+
+font-size:14px;
+
+color:var(--grey);
+
+margin-bottom:18px;
+
+}
+
+
+/* =========================================================
+   PET TYPES
+========================================================= */
+
+.pet-types{
+
+background:white;
+
+}
+
+.pet-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.pet-card{
+
+padding:30px 20px;
+
+text-align:center;
+
+border-radius:24px;
+
+background:#fff8fc;
+
+border:1px solid var(--border);
+
+transition:.3s;
+
+}
+
+.pet-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.pet-card .pet-icon{
+
+font-size:48px;
+
+margin-bottom:10px;
+
+}
+
+.pet-card h3{
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:22px;
+
+}
+
+.pet-card p{
+
+color:var(--grey);
+
+font-size:13px;
+
+}
+
+
+/* =========================================================
+   WHY
+========================================================= */
 
 .why{
-background:white;
+
+background:#fffaf7;
+
 }
 
 .why-grid{
+
 display:grid;
+
 grid-template-columns:repeat(4,1fr);
+
 gap:20px;
+
 }
 
 .why-card{
+
 text-align:center;
+
 padding:25px 15px;
+
 }
 
-.why-number{
-width:58px;
-height:58px;
-border-radius:50%;
+.why-icon{
+
+width:65px;
+
+height:65px;
+
 margin:0 auto 15px;
+
+border-radius:20px;
+
+background:var(--purple-light);
+
+color:var(--purple);
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
-background:#e8f2fc;
-color:var(--blue);
-font-weight:bold;
+
+font-size:25px;
+
 }
 
 .why-card h3{
-margin-bottom:8px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:22px;
+
+margin-bottom:6px;
+
 }
 
 .why-card p{
+
 color:var(--grey);
+
 font-size:14px;
+
 }
 
-/* PROCESS */
+
+/* =========================================================
+   PROCESS
+========================================================= */
 
 .process{
-background:#f6f8fa;
+
+background:white;
+
 }
 
 .process-grid{
+
 display:grid;
+
 grid-template-columns:repeat(4,1fr);
+
 gap:20px;
+
 }
 
 .process-card{
-background:white;
+
+background:#fff8fc;
+
 padding:28px;
+
+border-radius:22px;
+
 border:1px solid var(--border);
+
 }
 
 .process-number{
-color:var(--blue);
-font-size:28px;
-font-weight:bold;
-margin-bottom:10px;
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+background:var(--purple);
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:800;
+
+margin-bottom:15px;
+
 }
 
 .process-card h3{
-margin-bottom:8px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:22px;
+
+margin-bottom:6px;
+
 }
 
 .process-card p{
+
 color:var(--grey);
+
 font-size:14px;
+
 }
 
-/* GALLERY */
+
+/* =========================================================
+   GALLERY
+========================================================= */
 
 .gallery{
-background:white;
+
+background:#fff8fc;
+
 }
 
 .gallery-grid{
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:15px;
+
 }
 
 .gallery-item{
-height:300px;
+
+height:310px;
+
 overflow:hidden;
+
+border-radius:22px;
+
 }
 
 .gallery-item img{
+
 width:100%;
+
 height:100%;
+
 object-fit:cover;
+
 transition:.5s;
+
 }
 
 .gallery-item:hover img{
-transform:scale(1.06);
+
+transform:scale(1.07);
+
 }
 
-/* CTA */
+
+/* =========================================================
+   TESTIMONIAL STYLE
+========================================================= */
+
+.review-section{
+
+background:white;
+
+}
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+}
+
+.review{
+
+background:#fff8fc;
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+padding:28px;
+
+}
+
+.stars{
+
+color:#f59e0b;
+
+letter-spacing:3px;
+
+margin-bottom:12px;
+
+}
+
+.review p{
+
+color:var(--grey);
+
+font-size:14px;
+
+font-style:italic;
+
+margin-bottom:15px;
+
+}
+
+.review strong{
+
+color:var(--dark);
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
 
 .cta{
+
 background:
-linear-gradient(rgba(10,102,194,.9),rgba(10,102,194,.9)),
-url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85")
+
+linear-gradient(
+135deg,
+rgba(124,58,237,.95),
+rgba(236,72,153,.88)
+),
+
+url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1800&q=90")
+
 center/cover;
+
 color:white;
+
 text-align:center;
+
 }
 
 .cta h2{
-font-size:45px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:50px;
+
+line-height:1.1;
+
 margin-bottom:12px;
+
 }
 
 .cta p{
-max-width:650px;
+
+max-width:680px;
+
 margin:0 auto 28px;
-color:#eaf4ff;
+
+color:#f7edf9;
+
 }
 
-/* BOOKING */
+
+/* =========================================================
+   BOOKING
+========================================================= */
 
 .booking{
+
 background:white;
+
 }
 
 .booking-grid{
+
 display:grid;
-grid-template-columns:1fr 1fr;
+
+grid-template-columns:.9fr 1.1fr;
+
 gap:50px;
+
+align-items:start;
+
 }
 
 .booking-info h2{
-font-size:42px;
-margin-bottom:18px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:45px;
+
+line-height:1.1;
+
+margin:8px 0 15px;
+
 }
 
 .booking-info p{
+
 color:var(--grey);
-margin-bottom:22px;
+
+margin-bottom:25px;
+
 }
 
 .contact-box{
-padding:15px 0;
+
+padding:16px 0;
+
 border-bottom:1px solid var(--border);
+
 }
 
 .contact-box strong{
+
 display:block;
-margin-bottom:3px;
+
+margin-bottom:4px;
+
 }
 
 .contact-box span{
+
 color:var(--grey);
+
+}
+
+.contact-link{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+font-weight:700;
+
 }
 
 .phone-link{
-color:#0A66C2;
-font-weight:bold;
-font-size:20px;
-display:inline-flex;
-align-items:center;
-gap:8px;
+
+color:var(--purple);
+
 }
 
 .whatsapp-link{
-color:#25D366;
-font-weight:bold;
-font-size:20px;
-display:inline-flex;
-align-items:center;
-gap:8px;
+
+color:var(--green);
+
 }
 
 .form-box{
-background:#f3f6f8;
+
+background:#fff8fc;
+
 padding:30px;
+
+border-radius:28px;
+
+border:1px solid var(--border);
+
 }
 
 .form-box h3{
-font-size:27px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:30px;
+
 margin-bottom:20px;
+
 }
 
 .form-row{
+
 display:grid;
+
 grid-template-columns:1fr 1fr;
+
 gap:14px;
+
 }
 
 input,
 select,
 textarea{
+
 width:100%;
-padding:14px;
-border:1px solid #d8dfe5;
+
+padding:14px 15px;
+
+border:1px solid #ddd3df;
+
 background:white;
-font-family:inherit;
-margin-bottom:14px;
+
+border-radius:12px;
+
 outline:none;
+
+margin-bottom:14px;
+
 }
 
 input:focus,
 select:focus,
 textarea:focus{
-border-color:var(--blue);
+
+border-color:var(--purple);
+
+box-shadow:0 0 0 3px rgba(124,58,237,.08);
+
 }
 
 textarea{
+
 min-height:130px;
+
 resize:vertical;
+
 }
 
 .form-box button{
+
 width:100%;
+
 }
 
-/* PAYMENT */
+
+/* =========================================================
+   PAYMENT
+========================================================= */
 
 .payment{
-background:#111a23;
+
+background:var(--dark);
+
 color:white;
+
 text-align:center;
+
 }
 
 .payment h2{
-font-size:40px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:43px;
+
 margin:8px 0 12px;
+
 }
 
 .payment p{
+
 max-width:650px;
+
 margin:0 auto 25px;
-color:#cbd4dc;
+
+color:#d6cedd;
+
 }
 
-/* CONTACT */
 
-.contact-section{
-background:#f6f8fa;
+/* =========================================================
+   FINAL CONTACT
+========================================================= */
+
+.final-contact{
+
+background:#fff8fc;
+
 text-align:center;
+
 }
 
-.contact-phone{
-font-size:26px;
-font-weight:bold;
-color:#0A66C2;
-margin:15px 0;
+.big-phone{
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:35px;
+
+font-weight:800;
+
+color:var(--purple);
+
+margin:15px 0 20px;
+
 }
 
-.contact-phone a{
+.big-phone a{
+
 display:inline-flex;
+
 align-items:center;
+
 gap:10px;
+
 }
 
-.contact-whatsapp{
-margin-top:10px;
-}
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-background:#0b1117;
+
+background:#17121f;
+
 color:white;
-padding:50px 20px 25px;
+
+padding:55px 20px 25px;
+
 }
 
 .footer-grid{
+
 max-width:1200px;
+
 margin:auto;
+
 display:grid;
+
 grid-template-columns:2fr 1fr 1fr;
-gap:40px;
+
+gap:45px;
+
 }
 
 footer h3{
-margin-bottom:15px;
+
+font-family:"Baloo 2",sans-serif;
+
+font-size:23px;
+
+margin-bottom:12px;
+
 }
 
-footer h3 span{
-color:#55aaff;
+.footer-brand span{
+
+color:#c4b5fd;
+
 }
 
 footer p,
 footer a{
-color:#9ca8b3;
+
+color:#aaa1b0;
+
 font-size:14px;
+
 }
 
 .footer-links{
+
 display:grid;
-gap:10px;
+
+gap:9px;
+
 }
 
 .footer-links a:hover{
-color:#55aaff;
+
+color:white;
+
 }
 
 .footer-whatsapp{
+
 color:#25D366 !important;
-font-weight:bold;
+
+font-weight:700;
+
 }
 
 .footer-phone{
-color:white !important;
-font-size:17px !important;
-font-weight:bold;
+
 display:flex;
+
 align-items:center;
+
 gap:8px;
+
+font-weight:700;
+
+color:white !important;
+
 }
 
-/* FLOATING WHATSAPP */
+.footer-bottom{
 
-.whatsapp{
+max-width:1200px;
+
+margin:40px auto 0;
+
+padding-top:20px;
+
+border-top:1px solid #302936;
+
+text-align:center;
+
+color:#766d7d;
+
+font-size:13px;
+
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.floating-whatsapp{
+
 position:fixed;
+
 right:20px;
+
 bottom:20px;
-width:64px;
-height:64px;
+
+width:65px;
+
+height:65px;
+
 border-radius:50%;
+
 background:#25D366;
+
 color:white;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 font-size:32px;
+
 z-index:999;
-box-shadow:0 5px 25px rgba(0,0,0,.3);
+
+box-shadow:0 8px 28px rgba(0,0,0,.25);
+
 transition:.3s;
+
 }
 
-.whatsapp:hover{
+.floating-whatsapp:hover{
+
 transform:scale(1.1);
+
 background:#1ebe5d;
+
 }
 
-/* MOBILE */
 
-@media(max-width:850px){
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
 
 .menu{
+
 display:block;
+
 }
 
 .nav-links{
+
 display:none;
+
 position:absolute;
-top:65px;
+
+top:75px;
+
 left:0;
+
 right:0;
-background:#101820;
+
+background:white;
+
 flex-direction:column;
+
 padding:25px;
+
 gap:18px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+
 }
 
 .nav-links.active{
+
 display:flex;
+
 }
 
 .about-grid,
 .feature-grid,
+.mobile-grid,
 .booking-grid{
+
 grid-template-columns:1fr;
+
 }
 
 .service-grid{
+
 grid-template-columns:1fr 1fr;
+
 }
 
-.type-grid,
+.pet-grid,
 .why-grid,
 .process-grid{
+
 grid-template-columns:1fr 1fr;
+
+}
+
+.price-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.review-grid{
+
+grid-template-columns:1fr;
+
 }
 
 .gallery-grid{
+
 grid-template-columns:1fr 1fr;
+
 }
 
 .footer-grid{
+
 grid-template-columns:1fr;
+
 }
 
 }
@@ -832,102 +1967,175 @@ grid-template-columns:1fr;
 @media(max-width:600px){
 
 section{
+
 padding:65px 18px;
+
+}
+
+.hero{
+
+min-height:85vh;
+
+}
+
+.hero-content{
+
+padding:80px 18px;
+
 }
 
 .hero h1{
-font-size:44px;
+
+font-size:48px;
+
 }
 
 .hero p{
+
 font-size:16px;
+
+}
+
+.hero-buttons .btn{
+
+width:100%;
+
 }
 
 .section-title h2,
 .about-text h2,
 .feature-text h2,
+.mobile-text h2,
 .booking-info h2,
-.payment h2,
-.cta h2{
-font-size:34px;
+.payment h2{
+
+font-size:35px;
+
 }
 
 .service-grid,
-.type-grid,
+.pet-grid,
 .why-grid,
 .process-grid,
+.price-grid,
 .gallery-grid{
+
 grid-template-columns:1fr;
+
+}
+
+.gallery-item{
+
+height:280px;
+
 }
 
 .about-image,
 .feature-image,
-.ceiling-image{
-min-height:350px;
-}
+.mobile-image{
 
-.gallery-item{
-height:280px;
+min-height:350px;
+
 }
 
 .form-row{
+
 grid-template-columns:1fr;
+
 }
 
-.buttons .btn{
-width:100%;
+.contact-strip-inner{
+
+gap:15px;
+
+font-size:13px;
+
 }
 
 .logo{
-font-size:18px;
+
+font-size:20px;
+
+}
+
+.logo-icon{
+
+width:40px;
+
+height:40px;
+
+}
+
+.big-phone{
+
+font-size:29px;
+
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
 <nav class="navbar">
 
-<div class="logo">
-Lee <span>Tiling & Ceilings</span>
+<a href="#home" class="logo">
+
+<div class="logo-icon">
+<i class="fas fa-paw"></i>
 </div>
 
+Lee <span>Pet Grooming</span>
+
+</a>
+
+
 <div class="menu" onclick="toggleMenu()">
-☰
+<i class="fas fa-bars"></i>
 </div>
+
 
 <div class="nav-links" id="navLinks">
 
 <a href="#home">Home</a>
+
 <a href="#services">Services</a>
-<a href="#tiling">Tiling</a>
-<a href="#ceilings">Ceilings</a>
+
+<a href="#pricing">Prices</a>
+
 <a href="#gallery">Gallery</a>
-<a href="#booking">Get Quote</a>
+
+<a href="#booking">Book Now</a>
+
 
 <a
 href="tel:0688685355"
-class="phone-link"
-style="color:white;font-size:14px;">
+class="nav-phone">
 
 <i class="fas fa-phone"></i>
+
 068 868 5355
 
 </a>
 
+
 <a
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20to%20book%20a%20pet%20grooming%20appointment."
 target="_blank"
-class="whatsapp-nav">
+class="nav-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
+
 WhatsApp
 
 </a>
@@ -939,49 +2147,114 @@ WhatsApp
 </header>
 
 
-<!-- HERO -->
+<!-- =========================================================
+     QUICK CONTACT
+========================================================= -->
+
+<div class="contact-strip">
+
+<div class="contact-strip-inner">
+
+<a href="tel:0688685355">
+
+<i class="fas fa-phone"></i>
+
+068 868 5355
+
+</a>
+
+
+<a
+href="https://wa.me/27688685355"
+target="_blank"
+class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+WhatsApp Us
+
+</a>
+
+<span>
+
+<i class="fas fa-paw"></i>
+
+Professional Pet Grooming
+
+</span>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<div class="badge">
-Tiling • Ceilings • Interior Finishing
+<div class="hero-badge">
+
+<i class="fas fa-paw"></i>
+
+Caring For Pets With Love
+
 </div>
 
+
 <h1>
-Beautiful Floors.
+
+Happy Pets.
 <br>
-<span>Better Ceilings.</span>
+
+<span>Beautiful Grooming.</span>
+
 </h1>
 
+
 <p>
-Professional tiling and ceiling solutions for homes, apartments,
-offices and other properties.
+
+Professional dog and cat grooming designed to keep your pet
+clean, comfortable, fresh and looking their best.
+
 </p>
 
-<div class="buttons">
 
-<a href="#booking" class="btn btn-blue">
-Request A Quote
-</a>
+<div class="hero-buttons">
 
 <a
-href="tel:0688685355"
-class="btn btn-outline">
+href="#booking"
+class="btn btn-pink">
 
-<i class="fas fa-phone"></i>
-Call 068 868 5355
+<i class="fas fa-calendar-check"></i>
+
+Book A Grooming
 
 </a>
 
+
 <a
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20to%20book%20a%20pet%20grooming%20appointment."
 target="_blank"
 class="btn btn-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
+
 WhatsApp 068 868 5355
+
+</a>
+
+
+<a
+href="tel:0688685355"
+class="btn btn-white">
+
+<i class="fas fa-phone"></i>
+
+Call Us
 
 </a>
 
@@ -992,51 +2265,76 @@ WhatsApp 068 868 5355
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
 <section class="about">
 
 <div class="container about-grid">
 
-<div class="about-image"></div>
+
+<div class="about-image">
+
+<div class="about-badge">
+
+<i class="fas fa-heart"
+style="color:#ec4899;"></i>
+
+Gentle • Caring • Professional
+
+</div>
+
+</div>
+
 
 <div class="about-text">
 
-<div class="section-title" style="text-align:left;margin-bottom:20px">
-
 <div class="small">
-Lee Tiling & Ceilings
+About Lee Pet Grooming
 </div>
+
 
 <h2>
-Give Your Interior A Fresh Finish
+More Than Grooming. It's Pet Care.
 </h2>
 
-</div>
 
 <p>
-We provide tiling and ceiling services for residential and selected
-commercial projects.
+
+At Lee Pet Grooming, we believe every pet deserves to feel
+comfortable, clean and cared for.
+
 </p>
 
+
 <p>
-From bathroom and kitchen tiling to ceiling installation and repairs,
-we can discuss your project requirements and prepare a quotation.
+
+Our grooming services are designed for dogs and cats and can
+include bathing, drying, brushing, trimming, nail care and
+general grooming.
+
 </p>
+
 
 <div class="highlight">
-Call or WhatsApp us today: 068 868 5355
+
+<i class="fas fa-heart"
+style="color:#ec4899;"></i>
+
+We treat every pet with patience, care and respect.
+
 </div>
 
-<br>
 
 <a
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20more%20information."
 target="_blank"
 class="btn btn-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
-WhatsApp 068 868 5355
+
+Chat With Us
 
 </a>
 
@@ -1047,7 +2345,9 @@ WhatsApp 068 868 5355
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================================================
+     SERVICES
+========================================================= -->
 
 <section class="services" id="services">
 
@@ -1060,70 +2360,216 @@ Our Services
 </div>
 
 <h2>
-Tiling & Ceiling Services
+Pet Grooming Services
 </h2>
 
 <p>
-Professional interior finishing solutions.
+
+Choose the grooming service your pet needs and contact us
+for a quotation or appointment.
+
 </p>
 
 </div>
+
 
 <div class="service-grid">
 
-<div class="card">
-<div class="icon">⬜</div>
-<h3>Floor Tiling</h3>
-<p>Floor tile installation for homes, offices and suitable properties.</p>
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-bath"></i>
+
 </div>
 
-<div class="card">
-<div class="icon">🧱</div>
-<h3>Wall Tiling</h3>
-<p>Wall tile installation for bathrooms, kitchens and feature areas.</p>
+<h3>
+Bath & Dry
+</h3>
+
+<p>
+
+Pet bathing, shampooing, drying and freshening for a clean,
+comfortable coat.
+
+</p>
+
 </div>
 
-<div class="card">
-<div class="icon">🚿</div>
-<h3>Bathroom Tiling</h3>
-<p>Bathroom floors, walls, shower areas and bath surrounds.</p>
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-scissors"></i>
+
 </div>
 
-<div class="card">
-<div class="icon">🍽️</div>
-<h3>Kitchen Tiling</h3>
-<p>Kitchen floors, walls and splashback tiling.</p>
+<h3>
+Haircut & Trimming
+</h3>
+
+<p>
+
+Professional trimming and grooming according to your pet's
+coat and grooming requirements.
+
+</p>
+
 </div>
 
-<div class="card">
-<div class="icon">✨</div>
-<h3>Feature Walls</h3>
-<p>Decorative tile layouts and feature wall projects.</p>
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-paw"></i>
+
 </div>
 
-<div class="card">
-<div class="icon">🔧</div>
-<h3>Tile Repairs</h3>
-<p>Replacement of damaged tiles and selected grout repairs.</p>
+<h3>
+Full Groom
+</h3>
+
+<p>
+
+A complete grooming session combining cleaning, brushing,
+trimming and finishing.
+
+</p>
+
 </div>
 
-<div class="card">
-<div class="icon">🏠</div>
-<h3>Ceiling Installation</h3>
-<p>New ceiling installation for residential and selected commercial spaces.</p>
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-hand-sparkles"></i>
+
 </div>
 
-<div class="card">
-<div class="icon">💡</div>
-<h3>Bulkheads</h3>
-<p>Decorative bulkheads designed around room and lighting requirements.</p>
+<h3>
+Nail Clipping
+</h3>
+
+<p>
+
+Nail trimming to help keep your pet's paws neat and comfortable.
+
+</p>
+
 </div>
 
-<div class="card">
-<div class="icon">🛠️</div>
-<h3>Ceiling Repairs</h3>
-<p>Repairs for selected cracked, damaged or water-affected ceilings.</p>
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-wind"></i>
+
 </div>
+
+<h3>
+Brushing & De-shedding
+</h3>
+
+<p>
+
+Brushing and coat care to help remove loose hair and improve
+coat appearance.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-cat"></i>
+
+</div>
+
+<h3>
+Cat Grooming
+</h3>
+
+<p>
+
+Gentle grooming services for cats depending on coat,
+condition and temperament.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-dog"></i>
+
+</div>
+
+<h3>
+Dog Grooming
+</h3>
+
+<p>
+
+Grooming options for different dog breeds, sizes and coat types.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-spray-can-sparkles"></i>
+
+</div>
+
+<h3>
+Fresh & Clean Finish
+</h3>
+
+<p>
+
+Finishing care to leave your pet looking fresh and feeling clean.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fas fa-heart"></i>
+
+</div>
+
+<h3>
+Pet Care Approach
+</h3>
+
+<p>
+
+We aim to make grooming a calm and positive experience for
+your pet.
+
+</p>
+
+</div>
+
 
 </div>
 
@@ -1132,66 +2578,103 @@ Professional interior finishing solutions.
 </section>
 
 
-<!-- TILING -->
+<!-- =========================================================
+     FEATURE
+========================================================= -->
 
-<section class="tiling" id="tiling">
+<section class="feature">
 
 <div class="container feature-grid">
+
 
 <div class="feature-image"></div>
 
+
 <div class="feature-text">
 
 <div class="small">
-Floor & Wall Tiling
+Quality Pet Grooming
 </div>
 
 <h2>
-Transform Your Floors & Walls
+Keep Your Pet Looking & Feeling Great
 </h2>
 
 <p>
-The right tiles can completely change the appearance of a room.
+
+Regular grooming can help keep your pet's coat clean and
+comfortable while giving you an opportunity to maintain
+their general hygiene.
+
 </p>
 
-<div class="list">
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Floor tile installation</span>
-</div>
+<div class="check-list">
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Wall tile installation</span>
-</div>
+<div class="check">
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Bathroom tiling</span>
-</div>
+<i class="fas fa-check-circle"></i>
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Kitchen splashbacks</span>
-</div>
-
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Feature walls</span>
-</div>
-
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Tile replacement and repairs</span>
-</div>
+Clean and fresh coat
 
 </div>
 
-<br>
 
-<a href="#booking" class="btn btn-blue">
-Get Tiling Quote
+<div class="check">
+
+<i class="fas fa-check-circle"></i>
+
+Professional grooming
+
+</div>
+
+
+<div class="check">
+
+<i class="fas fa-check-circle"></i>
+
+Dog and cat services
+
+</div>
+
+
+<div class="check">
+
+<i class="fas fa-check-circle"></i>
+
+Nail care
+
+</div>
+
+
+<div class="check">
+
+<i class="fas fa-check-circle"></i>
+
+Brushing and trimming
+
+</div>
+
+
+<div class="check">
+
+<i class="fas fa-check-circle"></i>
+
+Appointment-based service
+
+</div>
+
+</div>
+
+
+<a
+href="#booking"
+class="btn btn-purple">
+
+<i class="fas fa-calendar"></i>
+
+Book Your Pet
+
 </a>
 
 </div>
@@ -1201,114 +2684,306 @@ Get Tiling Quote
 </section>
 
 
-<!-- CEILINGS -->
+<!-- =========================================================
+     MOBILE GROOMING
+========================================================= -->
 
-<section class="ceilings" id="ceilings">
+<section class="mobile-grooming">
 
-<div class="container feature-grid">
+<div class="container mobile-grid">
 
-<div class="feature-text">
+
+<div class="mobile-text">
 
 <div class="small">
-Ceiling Solutions
+Convenient Pet Grooming
 </div>
+
 
 <h2>
-Create A Better Ceiling
+We Come To You
 </h2>
 
+
 <p>
-We can discuss new ceiling installations, repairs and decorative
-ceiling requirements.
+
+Ask us about mobile pet grooming and convenient grooming
+options for your pet.
+
 </p>
 
-<div class="list">
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Ceiling board installation</span>
-</div>
+<div class="mobile-list">
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>PVC ceiling enquiries</span>
-</div>
+<div>
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Ceiling repairs</span>
-</div>
+<i class="fas fa-check-circle"></i>
 
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Bulkheads</span>
-</div>
-
-<div class="list-item">
-<span class="tick">✓</span>
-<span>Cornice finishing</span>
-</div>
+Convenient appointments
 
 </div>
 
-<br>
 
-<a href="#booking" class="btn btn-blue">
-Get Ceiling Quote
+<div>
+
+<i class="fas fa-check-circle"></i>
+
+Less travel for your pet
+
+</div>
+
+
+<div>
+
+<i class="fas fa-check-circle"></i>
+
+Suitable for busy pet owners
+
+</div>
+
+
+<div>
+
+<i class="fas fa-check-circle"></i>
+
+WhatsApp booking
+
+</div>
+
+</div>
+
+
+<a
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20am%20interested%20in%20mobile%20pet%20grooming."
+target="_blank"
+class="btn btn-whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+Ask About Mobile Grooming
+
 </a>
 
 </div>
 
-<div class="ceiling-image"></div>
+
+<div class="mobile-image"></div>
 
 </div>
 
 </section>
 
 
-<!-- TYPES -->
+<!-- =========================================================
+     PRICING
+========================================================= -->
 
-<section class="tile-types">
+<section class="pricing" id="pricing">
 
 <div class="container">
 
 <div class="section-title">
 
 <div class="small">
-Project Types
+Starting Prices
 </div>
 
 <h2>
-Where We Can Help
+Simple Grooming Prices
 </h2>
 
+<p>
+
+Final pricing may depend on your pet's breed, size, coat
+condition, grooming requirements and location.
+
+</p>
+
 </div>
 
-<div class="type-grid">
 
-<div class="type">
-<div class="type-icon">🏠</div>
-<h3>Homes</h3>
-<p>House tiling and ceiling projects.</p>
+<div class="price-grid">
+
+
+<div class="price-card">
+
+<div class="price-icon">
+🐶
 </div>
 
-<div class="type">
-<div class="type-icon">🏢</div>
-<h3>Offices</h3>
-<p>Selected office tiling and ceiling work.</p>
+<h3>
+Basic Dog Groom
+</h3>
+
+<div class="price">
+From R250
 </div>
 
-<div class="type">
-<div class="type-icon">🚿</div>
-<h3>Bathrooms</h3>
-<p>Bathroom floors, walls and ceilings.</p>
+<p>
+
+Basic bath, drying and brushing.
+
+</p>
+
+<a href="#booking"
+class="btn btn-purple">
+
+Book Now
+
+</a>
+
 </div>
 
-<div class="type">
-<div class="type-icon">🍽️</div>
-<h3>Kitchens</h3>
-<p>Kitchen floors, walls and splashbacks.</p>
+
+<div class="price-card">
+
+<div class="price-icon">
+✂️
 </div>
+
+<h3>
+Full Dog Groom
+</h3>
+
+<div class="price">
+From R350
+</div>
+
+<p>
+
+Bath, drying, brushing and trimming.
+
+</p>
+
+<a href="#booking"
+class="btn btn-purple">
+
+Book Now
+
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<div class="price-icon">
+🐱
+</div>
+
+<h3>
+Cat Grooming
+</h3>
+
+<div class="price">
+From R300
+</div>
+
+<p>
+
+Grooming depending on coat and condition.
+
+</p>
+
+<a href="#booking"
+class="btn btn-purple">
+
+Book Now
+
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<div class="price-icon">
+🐾
+</div>
+
+<h3>
+Nail Clipping
+</h3>
+
+<div class="price">
+From R100
+</div>
+
+<p>
+
+Basic nail clipping and paw care.
+
+</p>
+
+<a href="#booking"
+class="btn btn-purple">
+
+Book Now
+
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<div class="price-icon">
+🛁
+</div>
+
+<h3>
+Bath & Dry
+</h3>
+
+<div class="price">
+From R200
+</div>
+
+<p>
+
+Bathing, drying and brushing.
+
+</p>
+
+<a href="#booking"
+class="btn btn-purple">
+
+Book Now
+
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<div class="price-icon">
+❤️
+</div>
+
+<h3>
+Custom Grooming
+</h3>
+
+<div class="price">
+Quote
+</div>
+
+<p>
+
+For larger pets, special coats or specific requirements.
+
+</p>
+
+<a href="#booking"
+class="btn btn-purple">
+
+Request Quote
+
+</a>
+
+</div>
+
 
 </div>
 
@@ -1317,7 +2992,108 @@ Where We Can Help
 </section>
 
 
-<!-- WHY -->
+<!-- =========================================================
+     PET TYPES
+========================================================= -->
+
+<section class="pet-types">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Pet Care
+</div>
+
+<h2>
+Grooming For Different Pets
+</h2>
+
+</div>
+
+
+<div class="pet-grid">
+
+
+<div class="pet-card">
+
+<div class="pet-icon">
+🐶
+</div>
+
+<h3>
+Dogs
+</h3>
+
+<p>
+Small, medium and large dogs depending on service requirements.
+</p>
+
+</div>
+
+
+<div class="pet-card">
+
+<div class="pet-icon">
+🐱
+</div>
+
+<h3>
+Cats
+</h3>
+
+<p>
+Gentle cat grooming based on coat and temperament.
+</p>
+
+</div>
+
+
+<div class="pet-card">
+
+<div class="pet-icon">
+🐾
+</div>
+
+<h3>
+Puppies
+</h3>
+
+<p>
+Ask us about suitable grooming options for puppies.
+</p>
+
+</div>
+
+
+<div class="pet-card">
+
+<div class="pet-icon">
+❤️
+</div>
+
+<h3>
+Special Care
+</h3>
+
+<p>
+Discuss special grooming requirements with us before booking.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
 
 <section class="why">
 
@@ -1326,40 +3102,94 @@ Where We Can Help
 <div class="section-title">
 
 <div class="small">
-Why Choose Lee
+Why Lee Pet Grooming
 </div>
 
 <h2>
-A Simple Project Experience
+A Better Grooming Experience
 </h2>
 
 </div>
 
+
 <div class="why-grid">
 
-<div class="why-card">
-<div class="why-number">01</div>
-<h3>Quote First</h3>
-<p>Discuss the project and receive a quotation before work begins.</p>
-</div>
 
 <div class="why-card">
-<div class="why-number">02</div>
-<h3>Project Focus</h3>
-<p>We focus on the tiling or ceiling work your property needs.</p>
+
+<div class="why-icon">
+
+<i class="fas fa-heart"></i>
+
 </div>
 
-<div class="why-card">
-<div class="why-number">03</div>
-<h3>Clear Communication</h3>
-<p>Stay in contact while your project is being planned.</p>
+<h3>
+Pet First
+</h3>
+
+<p>
+We focus on a calm, caring grooming experience.
+</p>
+
 </div>
 
+
 <div class="why-card">
-<div class="why-number">04</div>
-<h3>WhatsApp Booking</h3>
-<p>Send your project details directly through WhatsApp.</p>
+
+<div class="why-icon">
+
+<i class="fas fa-user-check"></i>
+
 </div>
+
+<h3>
+Professional
+</h3>
+
+<p>
+Clear communication and appointment-based service.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-clock"></i>
+
+</div>
+
+<h3>
+Convenient
+</h3>
+
+<p>
+Easy booking through WhatsApp or our online form.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+
+<i class="fas fa-paw"></i>
+
+</div>
+
+<h3>
+Pet Care
+</h3>
+
+<p>
+Grooming designed around your pet's needs.
+</p>
+
+</div>
+
 
 </div>
 
@@ -1368,7 +3198,9 @@ A Simple Project Experience
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================================================
+     PROCESS
+========================================================= -->
 
 <section class="process">
 
@@ -1377,40 +3209,86 @@ A Simple Project Experience
 <div class="section-title">
 
 <div class="small">
-Our Process
+How It Works
 </div>
 
 <h2>
-From Enquiry To Finished Space
+Book Your Pet's Grooming
 </h2>
 
 </div>
 
+
 <div class="process-grid">
 
-<div class="process-card">
-<div class="process-number">01</div>
-<h3>Send Your Details</h3>
-<p>Tell us what you want tiled or what ceiling work you need.</p>
-</div>
 
 <div class="process-card">
-<div class="process-number">02</div>
-<h3>Discuss The Project</h3>
-<p>We discuss the area, materials and scope of work.</p>
+
+<div class="process-number">
+01
 </div>
 
-<div class="process-card">
-<div class="process-number">03</div>
-<h3>Receive A Quote</h3>
-<p>The project can be quoted according to the agreed scope.</p>
+<h3>
+Contact Us
+</h3>
+
+<p>
+Call or WhatsApp 068 868 5355.
+</p>
+
 </div>
 
+
 <div class="process-card">
-<div class="process-number">04</div>
-<h3>Start The Work</h3>
-<p>Once arrangements are accepted, the project can proceed.</p>
+
+<div class="process-number">
+02
 </div>
+
+<h3>
+Tell Us About Your Pet
+</h3>
+
+<p>
+Tell us your pet's breed, size and grooming requirements.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+03
+</div>
+
+<h3>
+Choose An Appointment
+</h3>
+
+<p>
+Discuss a suitable grooming date and time.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">
+04
+</div>
+
+<h3>
+Enjoy The Grooming
+</h3>
+
+<p>
+Bring your pet or ask about our mobile grooming option.
+</p>
+
+</div>
+
 
 </div>
 
@@ -1419,7 +3297,9 @@ From Enquiry To Finished Space
 </section>
 
 
-<!-- GALLERY -->
+<!-- =========================================================
+     GALLERY
+========================================================= -->
 
 <section class="gallery" id="gallery">
 
@@ -1428,45 +3308,79 @@ From Enquiry To Finished Space
 <div class="section-title">
 
 <div class="small">
-Our Work
+Pet Grooming Gallery
 </div>
 
 <h2>
-Tiling & Ceiling Inspiration
+Happy Pets, Fresh Looks
 </h2>
 
 <p>
-Replace these demonstration images with your own project photos as
-your portfolio grows.
+
+These are demonstration images. Replace them with your own
+pet grooming photos as your business portfolio grows.
+
 </p>
 
 </div>
 
+
 <div class="gallery-grid">
 
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85">
-</div>
 
 <div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85">
+
+<img
+src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1000&q=90"
+alt="Happy dog">
+
 </div>
 
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85">
-</div>
 
 <div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85">
+
+<img
+src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=90"
+alt="Dog grooming">
+
 </div>
 
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85">
-</div>
 
 <div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85">
+
+<img
+src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1000&q=90"
+alt="Pet">
+
 </div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1000&q=90"
+alt="Cat">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=1000&q=90"
+alt="Dog">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=90"
+alt="Dogs">
+
+</div>
+
 
 </div>
 
@@ -1475,36 +3389,138 @@ your portfolio grows.
 </section>
 
 
-<!-- CTA -->
+<!-- =========================================================
+     REVIEWS
+========================================================= -->
+
+<section class="review-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">
+Customer Care
+</div>
+
+<h2>
+Your Pet Deserves The Best
+</h2>
+
+<p>
+Add your real customer reviews here as your grooming business grows.
+</p>
+
+</div>
+
+
+<div class="review-grid">
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Professional, caring and convenient. My dog came home looking fresh and happy."
+</p>
+
+<strong>
+Happy Pet Owner
+</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Booking through WhatsApp was easy and the service was convenient."
+</p>
+
+<strong>
+Happy Pet Owner
+</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"My pet was treated gently and looked fantastic after grooming."
+</p>
+
+<strong>
+Happy Pet Owner
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
 
 <section class="cta">
 
 <div class="container">
 
 <h2>
-Ready To Transform Your Space?
+Ready To Pamper Your Pet?
 </h2>
 
 <p>
-Need tiling, bathroom tiling, kitchen tiling, ceiling installation or
-repairs? Contact us today.
+
+Book a grooming appointment today or send us a WhatsApp message
+with your pet's grooming requirements.
+
 </p>
 
-<div class="buttons" style="justify-content:center;">
 
-<a href="#booking" class="btn btn-blue">
-Request A Quote
-</a>
+<div class="hero-buttons"
+style="justify-content:center;">
+
 
 <a
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="#booking"
+class="btn btn-white">
+
+<i class="fas fa-calendar-check"></i>
+
+Book Now
+
+</a>
+
+
+<a
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20to%20book%20a%20pet%20grooming%20appointment."
 target="_blank"
 class="btn btn-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
+
 WhatsApp 068 868 5355
 
 </a>
+
 
 </div>
 
@@ -1513,44 +3529,54 @@ WhatsApp 068 868 5355
 </section>
 
 
-<!-- BOOKING -->
+<!-- =========================================================
+     BOOKING
+========================================================= -->
 
 <section class="booking" id="booking">
 
 <div class="container booking-grid">
 
+
 <div class="booking-info">
 
-<div class="section-title" style="text-align:left;margin-bottom:20px">
+<div class="section-title"
+style="text-align:left;margin-bottom:20px;">
 
 <div class="small">
-Get A Quote
+Book Your Pet
 </div>
 
 <h2>
-Tell Us About Your Project
+Tell Us About Your Pet
 </h2>
 
 </div>
 
+
 <p>
-Complete the form and your project information will be prepared for
-WhatsApp.
+
+Complete the form and your booking information will be
+prepared into a WhatsApp message.
+
 </p>
 
 
 <div class="contact-box">
 
 <strong>
-<i class="fas fa-phone" style="color:#0A66C2;"></i>
+<i class="fas fa-phone"
+style="color:#7c3aed;"></i>
+
 Phone
 </strong>
 
 <a
 href="tel:0688685355"
-class="phone-link">
+class="contact-link phone-link">
 
 <i class="fas fa-phone"></i>
+
 068 868 5355
 
 </a>
@@ -1561,16 +3587,19 @@ class="phone-link">
 <div class="contact-box">
 
 <strong>
-<i class="fab fa-whatsapp" style="color:#25D366;"></i>
+<i class="fab fa-whatsapp"
+style="color:#25D366;"></i>
+
 WhatsApp
 </strong>
 
 <a
 href="https://wa.me/27688685355"
 target="_blank"
-class="whatsapp-link">
+class="contact-link whatsapp-link">
 
 <i class="fab fa-whatsapp"></i>
+
 068 868 5355
 
 </a>
@@ -1581,11 +3610,13 @@ class="whatsapp-link">
 <div class="contact-box">
 
 <strong>
-Services
+<i class="fas fa-paw"></i>
+
+Pets
 </strong>
 
 <span>
-Tiling • Ceilings • Repairs
+Dogs • Cats • Puppies
 </span>
 
 </div>
@@ -1594,26 +3625,32 @@ Tiling • Ceilings • Repairs
 <div class="contact-box">
 
 <strong>
-Project Types
+<i class="fas fa-calendar"></i>
+
+Booking
 </strong>
 
 <span>
-Residential • Office • Commercial
+Appointment required
 </span>
 
 </div>
 
+
 <br>
 
+
 <a
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20to%20make%20a%20booking."
 target="_blank"
 class="btn btn-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
-Chat on WhatsApp
+
+Chat On WhatsApp
 
 </a>
+
 
 </div>
 
@@ -1621,12 +3658,15 @@ Chat on WhatsApp
 <div class="form-box">
 
 <h3>
-Project Enquiry
+Pet Grooming Booking
 </h3>
+
 
 <form onsubmit="sendWhatsApp(event)">
 
+
 <div class="form-row">
+
 
 <input
 type="text"
@@ -1635,6 +3675,7 @@ placeholder="Your Name"
 required
 >
 
+
 <input
 type="tel"
 id="phone"
@@ -1642,76 +3683,134 @@ placeholder="068 868 5355"
 required
 >
 
+
 </div>
+
+
+<input
+type="text"
+id="petName"
+placeholder="Pet's Name"
+required
+>
+
+
+<div class="form-row">
+
+
+<select id="petType" required>
+
+<option value="">
+Pet Type
+</option>
+
+<option>Dog</option>
+
+<option>Cat</option>
+
+<option>Puppy</option>
+
+<option>Other</option>
+
+</select>
+
+
+<select id="petSize" required>
+
+<option value="">
+Pet Size
+</option>
+
+<option>Small</option>
+
+<option>Medium</option>
+
+<option>Large</option>
+
+<option>Extra Large</option>
+
+<option>Not Sure</option>
+
+</select>
+
+
+</div>
+
 
 <select id="service" required>
 
-<option value="">Select Service</option>
+<option value="">
+Select Grooming Service
+</option>
 
-<option>Floor Tiling</option>
-<option>Wall Tiling</option>
-<option>Bathroom Tiling</option>
-<option>Kitchen Tiling</option>
-<option>Kitchen Splashback</option>
-<option>Feature Wall</option>
-<option>Tile Repair</option>
-<option>Ceiling Installation</option>
-<option>PVC Ceiling</option>
-<option>Ceiling Repair</option>
-<option>Bulkhead</option>
-<option>Cornices</option>
-<option>Tiling & Ceiling</option>
+<option>Bath & Dry</option>
+
+<option>Haircut & Trimming</option>
+
+<option>Full Groom</option>
+
+<option>Nail Clipping</option>
+
+<option>Brushing & De-shedding</option>
+
+<option>Cat Grooming</option>
+
+<option>Dog Grooming</option>
+
+<option>Custom Grooming</option>
+
 <option>Other</option>
 
 </select>
 
-<select id="property" required>
 
-<option value="">Property Type</option>
+<select id="locationType" required>
 
-<option>House</option>
-<option>Apartment</option>
-<option>Bathroom</option>
-<option>Kitchen</option>
-<option>Office</option>
-<option>Shop</option>
-<option>Commercial Property</option>
-<option>Other</option>
+<option value="">
+Grooming Location
+</option>
+
+<option>At Your Location</option>
+
+<option>At Lee Pet Grooming</option>
+
+<option>Not Sure</option>
 
 </select>
+
 
 <input
 type="text"
 id="area"
-placeholder="Property Area / Location"
+placeholder="Your Area / Location"
 required
 >
 
-<input
-type="text"
-id="size"
-placeholder="Approximate Area / Size"
->
 
 <input
 type="date"
 id="date"
+required
 >
+
 
 <textarea
 id="details"
-placeholder="Tell us about the project..."
+placeholder="Tell us about your pet. Include breed, coat condition, special requirements or anything else we should know."
 required
 ></textarea>
+
 
 <button
 type="submit"
 class="btn btn-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
-Send Quote Request
+
+Send Booking To WhatsApp
 
 </button>
+
 
 </form>
 
@@ -1722,31 +3821,46 @@ Send Quote Request
 </section>
 
 
-<!-- PAYMENT -->
+<!-- =========================================================
+     PAYMENT
+========================================================= -->
 
 <section class="payment">
 
 <div class="container">
 
-<div class="badge">
+<div class="section-title"
+style="margin-bottom:25px;">
+
+<div class="small"
+style="color:#c4b5fd;">
+
 Easy Payment
+
 </div>
 
 <h2>
 Pay With Yoco
 </h2>
 
+</div>
+
+
 <p>
-Once your quotation, deposit or project payment has been agreed,
-you can use our Yoco payment option.
+
+Once your grooming appointment and payment amount have been
+confirmed, you can use our Yoco payment option.
+
 </p>
+
 
 <a
 href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
 target="_blank"
-class="btn btn-blue">
+class="btn btn-pink">
 
 <i class="fas fa-credit-card"></i>
+
 Pay With Yoco
 
 </a>
@@ -1756,34 +3870,40 @@ Pay With Yoco
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================================================
+     FINAL CONTACT
+========================================================= -->
 
-<section class="contact-section">
+<section class="final-contact">
 
 <div class="container">
 
 <div class="section-title">
 
 <div class="small">
-Contact Lee Tiling & Ceilings
+Contact Lee Pet Grooming
 </div>
 
 <h2>
-Let's Discuss Your Project
+Let's Groom Your Pet
 </h2>
 
 <p>
-Call or WhatsApp us for your tiling and ceiling quotation.
+
+Call us or send a WhatsApp message to arrange your pet's
+grooming appointment.
+
 </p>
 
 </div>
 
 
-<div class="contact-phone">
+<div class="big-phone">
 
 <a href="tel:0688685355">
 
 <i class="fas fa-phone"></i>
+
 068 868 5355
 
 </a>
@@ -1791,54 +3911,64 @@ Call or WhatsApp us for your tiling and ceiling quotation.
 </div>
 
 
-<div class="contact-whatsapp">
-
 <a
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20to%20book%20my%20pet."
 target="_blank"
 class="btn btn-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
+
 WhatsApp 068 868 5355
 
 </a>
 
 </div>
 
-</div>
-
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
 <div class="footer-grid">
 
+
 <div>
 
-<h3>
-Lee <span>Tiling & Ceilings</span>
+<h3 class="footer-brand">
+
+Lee <span>Pet Grooming</span>
+
 </h3>
 
+
 <p>
-Floor and wall tiling, bathroom and kitchen tiling, ceiling
-installation, repairs, bulkheads and interior finishing solutions.
+
+Professional dog and cat grooming, bathing, trimming,
+brushing, nail care and pet hygiene services.
+
 </p>
 
+
 <br>
+
 
 <a
 href="tel:0688685355"
 class="footer-phone">
 
 <i class="fas fa-phone"></i>
+
 068 868 5355
 
 </a>
 
+
 <br>
+
 
 <a
 href="https://wa.me/27688685355"
@@ -1846,6 +3976,7 @@ target="_blank"
 class="footer-whatsapp">
 
 <i class="fab fa-whatsapp"></i>
+
 WhatsApp 068 868 5355
 
 </a>
@@ -1861,11 +3992,17 @@ Services
 
 <div class="footer-links">
 
-<a href="#tiling">Floor Tiling</a>
-<a href="#tiling">Wall Tiling</a>
-<a href="#tiling">Bathroom Tiling</a>
-<a href="#ceilings">Ceiling Installation</a>
-<a href="#ceilings">Ceiling Repairs</a>
+<a href="#services">Dog Grooming</a>
+
+<a href="#services">Cat Grooming</a>
+
+<a href="#services">Bath & Dry</a>
+
+<a href="#services">Haircut & Trimming</a>
+
+<a href="#services">Nail Clipping</a>
+
+<a href="#services">Brushing</a>
 
 </div>
 
@@ -1875,18 +4012,29 @@ Services
 <div>
 
 <h3>
-Contact
+Quick Links
 </h3>
 
 <div class="footer-links">
+
+<a href="#home">Home</a>
+
+<a href="#pricing">Prices</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#booking">Book Now</a>
+
 
 <a
 href="tel:0688685355">
 
 <i class="fas fa-phone"></i>
-Call 068 868 5355
+
+Call Us
 
 </a>
+
 
 <a
 href="https://wa.me/27688685355"
@@ -1895,15 +4043,17 @@ target="_blank">
 <i class="fab fa-whatsapp"
 style="color:#25D366;"></i>
 
-WhatsApp 068 868 5355
+WhatsApp
 
 </a>
+
 
 <a
 href="https://pay.yoco.com/lee-mobile-servises-and-constraction"
 target="_blank">
 
 <i class="fas fa-credit-card"></i>
+
 Pay With Yoco
 
 </a>
@@ -1912,33 +4062,47 @@ Pay With Yoco
 
 </div>
 
+
 </div>
 
 
 <div class="footer-bottom">
 
-© 2026 Lee Tiling & Ceilings.
+© 2026 Lee Pet Grooming.
 All Rights Reserved.
+
+<br>
+
+<span>
+Caring for pets with love.
+</span>
 
 </div>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
 
 <a
-class="whatsapp"
-href="https://wa.me/27688685355?text=Hello%20Lee%20Tiling%20%26%20Ceilings%2C%20I%20would%20like%20a%20quotation."
+href="https://wa.me/27688685355?text=Hello%20Lee%20Pet%20Grooming%2C%20I%20would%20like%20to%20book%20a%20pet%20grooming%20appointment."
 target="_blank"
-aria-label="WhatsApp Lee Tiling and Ceilings">
+class="floating-whatsapp"
+aria-label="WhatsApp Lee Pet Grooming">
 
 <i class="fab fa-whatsapp"></i>
 
 </a>
 
 
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script>
+
 
 function toggleMenu(){
 
@@ -1953,23 +4117,30 @@ function sendWhatsApp(event){
 
 event.preventDefault();
 
+
 const name =
 document.getElementById("name").value;
 
 const phone =
 document.getElementById("phone").value;
 
+const petName =
+document.getElementById("petName").value;
+
+const petType =
+document.getElementById("petType").value;
+
+const petSize =
+document.getElementById("petSize").value;
+
 const service =
 document.getElementById("service").value;
 
-const property =
-document.getElementById("property").value;
+const locationType =
+document.getElementById("locationType").value;
 
 const area =
 document.getElementById("area").value;
-
-const size =
-document.getElementById("size").value;
 
 const date =
 document.getElementById("date").value;
@@ -1977,50 +4148,74 @@ document.getElementById("date").value;
 const details =
 document.getElementById("details").value;
 
+
 const reference =
-"LT-" +
-Math.floor(100000 + Math.random() * 900000);
+
+"LPG-" +
+
+Math.floor(
+100000 +
+Math.random() * 900000
+);
 
 
 const message =
 
-`Hello Lee Tiling & Ceilings,
+`Hello Lee Pet Grooming 🐾
 
-I would like to request a quotation.
+I would like to make a pet grooming booking.
 
-Quotation Reference: ${reference}
+Booking Reference: ${reference}
 
-Name: ${name}
+Owner Name:
+${name}
 
-Phone: ${phone}
+Phone:
+${phone}
 
-Service: ${service}
+Pet Name:
+${petName}
 
-Property Type: ${property}
+Pet Type:
+${petType}
 
-Property Area/Location: ${area}
+Pet Size:
+${petSize}
 
-Approximate Size: ${size || "Not specified"}
+Grooming Service:
+${service}
 
-Preferred Date: ${date || "Not specified"}
+Grooming Location:
+${locationType}
 
-Project Details:
+Area / Location:
+${area}
+
+Preferred Date:
+${date}
+
+Pet Details:
 ${details}
 
-Please let me know how we can proceed with the quotation.
+Please let me know the available appointment time and final price.
 
 Thank you.`;
 
 
 const url =
+
 "https://wa.me/27688685355?text=" +
+
 encodeURIComponent(message);
+
 
 window.open(url,"_blank");
 
 }
 
+
 </script>
+
 
 </body>
 </html>
