@@ -1,1 +1,1004 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0A66C2">
+  <meta name="description" content="Professional dog and cat grooming. Book your pet's grooming appointment online.">
+
+  <title>PawPerfect Grooming | Professional Pet Grooming</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7fbff;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5edf5;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 800;
+      color: #0A66C2;
+    }
+
+    .logo-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 14px;
+      background: #0A66C2;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #0A66C2;
+    }
+
+    .nav-book {
+      background: #0A66C2;
+      color: white !important;
+      padding: 11px 17px;
+      border-radius: 10px;
+    }
+
+    .menu {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px 55px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f3ff;
+      color: #0A66C2;
+      padding: 8px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #0A66C2;
+    }
+
+    .hero p {
+      color: #64748b;
+      font-size: 18px;
+      max-width: 590px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 21px;
+      border-radius: 12px;
+      font-weight: 800;
+      border: 2px solid #0A66C2;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: #0A66C2;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: #0A66C2;
+      background: white;
+    }
+
+    .hero-card {
+      min-height: 430px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #dff1ff, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #dcecf8;
+    }
+
+    .pet-circle {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: white;
+      display: grid;
+      place-items: center;
+      font-size: 150px;
+      box-shadow: 0 25px 60px rgba(10,102,194,.15);
+    }
+
+    .floating {
+      position: absolute;
+      background: white;
+      padding: 12px 16px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(20,40,70,.12);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .float-one {
+      top: 45px;
+      left: 25px;
+    }
+
+    .float-two {
+      bottom: 45px;
+      right: 25px;
+    }
+
+    /* TRUST */
+    .trust {
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 20px 50px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 15px;
+    }
+
+    .trust-item {
+      background: white;
+      padding: 22px;
+      border-radius: 17px;
+      text-align: center;
+      border: 1px solid #e6eef6;
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-top: 6px;
+    }
+
+    .trust-icon {
+      font-size: 28px;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 75px 20px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      color: #0A66C2;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin: 8px 0;
+    }
+
+    .section-title p {
+      color: #718096;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* SERVICES */
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #f8fbff;
+      border: 1px solid #e4edf5;
+      padding: 27px;
+      border-radius: 20px;
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(10,102,194,.10);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 15px;
+      background: #e7f3ff;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      color: #0A66C2;
+      font-weight: 800;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #e6eef6;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #0A66C2;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .step p {
+      color: #718096;
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    /* PRICING */
+    .pricing {
+      background: white;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .price-card {
+      border: 1px solid #e2eaf2;
+      border-radius: 20px;
+      padding: 25px;
+      background: #fff;
+    }
+
+    .price-card.featured {
+      border: 2px solid #0A66C2;
+      box-shadow: 0 15px 40px rgba(10,102,194,.12);
+    }
+
+    .price-card h3 {
+      margin-bottom: 7px;
+    }
+
+    .amount {
+      font-size: 29px;
+      font-weight: 900;
+      color: #0A66C2;
+      margin: 10px 0;
+    }
+
+    .price-card p {
+      color: #718096;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .price-card li {
+      font-size: 13px;
+      margin: 8px 0;
+    }
+
+    /* BOOKING */
+    .booking {
+      background: #0A66C2;
+      color: white;
+    }
+
+    .booking-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .booking-box h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .booking-box p {
+      opacity: .9;
+      margin-bottom: 25px;
+    }
+
+    .booking-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .white-btn {
+      background: white;
+      color: #0A66C2;
+      border-color: white;
+    }
+
+    .whatsapp-btn {
+      background: #22c55e;
+      border-color: #22c55e;
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0c1728;
+      color: white;
+      padding: 55px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 13px;
+    }
+
+    footer p,
+    footer a {
+      color: #aab7c8;
+      font-size: 14px;
+    }
+
+    footer a {
+      display: block;
+      margin: 7px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #263449;
+      color: #8998ac;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 73px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: 1px solid #e5edf5;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+      }
+
+      .hero-card {
+        min-height: 330px;
+      }
+
+      .pet-circle {
+        width: 220px;
+        height: 220px;
+        font-size: 115px;
+      }
+
+      .trust-grid,
+      .service-grid,
+      .steps,
+      .price-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .trust-grid,
+      .service-grid,
+      .steps,
+      .price-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 31px;
+      }
+
+      .booking-box h2 {
+        font-size: 32px;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">🐾</div>
+        PawPerfect Grooming
+      </a>
+
+      <button class="menu" onclick="toggleMenu()">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Prices</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+        <a href="booking.html" class="nav-book">Book Now</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="home">
+
+    <section class="hero">
+
+      <div>
+
+        <div class="badge">🐶 Professional Pet Grooming</div>
+
+        <h1>
+          Happy pets.<br>
+          <span>Fresh & fabulous.</span>
+        </h1>
+
+        <p>
+          Professional grooming for dogs and cats. Give your best friend
+          the care, comfort and clean look they deserve.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="booking.html" class="btn btn-primary">
+            📅 Book Grooming
+          </a>
+
+          <a href="#services" class="btn btn-outline">
+            View Services
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-card">
+
+        <div class="pet-circle">🐶</div>
+
+        <div class="floating float-one">
+          ⭐ Gentle Care
+        </div>
+
+        <div class="floating float-two">
+          🛁 Fresh & Clean
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust">
+
+      <div class="trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">🐾</div>
+          <strong>Pet Friendly</strong>
+          <small>Gentle handling</small>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">✂️</div>
+          <strong>Professional</strong>
+          <small>Quality grooming</small>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">📅</div>
+          <strong>Easy Booking</strong>
+          <small>Book online</small>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🏠</div>
+          <strong>Mobile Option</strong>
+          <small>We come to you</small>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+      <div class="section-inner">
+
+        <div class="section-title">
+          <span>Our Services</span>
+          <h2>Everything your pet needs</h2>
+          <p>
+            Choose the grooming service that suits your pet.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <div class="service-card">
+            <div class="service-icon">🛁</div>
+            <h3>Bath & Dry</h3>
+            <p>
+              A refreshing bath, shampoo, rinse and professional drying.
+            </p>
+            <div class="price">From R150</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">✂️</div>
+            <h3>Full Grooming</h3>
+            <p>
+              Bath, drying, brushing, trimming and a beautiful finish.
+            </p>
+            <div class="price">From R250</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🐕</div>
+            <h3>Breed Trim</h3>
+            <p>
+              Grooming and trimming tailored to your dog's coat and breed.
+            </p>
+            <div class="price">From R250</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🐾</div>
+            <h3>Nail Clipping</h3>
+            <p>
+              Safe nail trimming to keep your pet comfortable.
+            </p>
+            <div class="price">From R80</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">👂</div>
+            <h3>Ear Cleaning</h3>
+            <p>
+              Gentle external ear cleaning as part of your pet's grooming.
+            </p>
+            <div class="price">From R80</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🐱</div>
+            <h3>Cat Grooming</h3>
+            <p>
+              Gentle grooming for cats, including brushing and coat care.
+            </p>
+            <div class="price">From R250</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🐶</div>
+            <h3>Puppy Grooming</h3>
+            <p>
+              Gentle introductory grooming designed for young puppies.
+            </p>
+            <div class="price">From R180</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🦷</div>
+            <h3>Teeth Care</h3>
+            <p>
+              Basic pet dental-care grooming option.
+            </p>
+            <div class="price">From R100</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Mobile Grooming</h3>
+            <p>
+              Convenient grooming at your home, where available.
+            </p>
+            <div class="price">From R350</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+
+      <div class="section-inner">
+
+        <div class="section-title">
+          <span>Simple Process</span>
+          <h2>Book in 3 easy steps</h2>
+          <p>
+            Getting your pet groomed has never been easier.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Choose a service</h3>
+            <p>
+              Select the grooming service your pet needs.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Choose your appointment</h3>
+            <p>
+              Tell us your preferred date, time and location.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>We groom your pet</h3>
+            <p>
+              Your pet gets professional, gentle grooming and care.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+
+      <div class="section-inner">
+
+        <div class="section-title">
+          <span>Starting Prices</span>
+          <h2>Simple & transparent</h2>
+          <p>
+            Final prices may depend on pet size, breed, coat condition and service requirements.
+          </p>
+        </div>
+
+        <div class="price-grid">
+
+          <div class="price-card">
+            <h3>Quick Clean</h3>
+            <div class="amount">R150+</div>
+            <p>Bath & dry</p>
+            <ul>
+              <li>✓ Shampoo</li>
+              <li>✓ Rinse</li>
+              <li>✓ Drying</li>
+              <li>✓ Basic brushing</li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Book</a>
+          </div>
+
+          <div class="price-card featured">
+            <h3>Full Groom</h3>
+            <div class="amount">R250+</div>
+            <p>Complete grooming</p>
+            <ul>
+              <li>✓ Bath & dry</li>
+              <li>✓ Brushing</li>
+              <li>✓ Hair trimming</li>
+              <li>✓ Nail clipping</li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Book</a>
+          </div>
+
+          <div class="price-card">
+            <h3>Cat Groom</h3>
+            <div class="amount">R250+</div>
+            <p>Gentle cat grooming</p>
+            <ul>
+              <li>✓ Brushing</li>
+              <li>✓ Coat care</li>
+              <li>✓ Nail clipping</li>
+              <li>✓ Gentle handling</li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Book</a>
+          </div>
+
+          <div class="price-card">
+            <h3>Mobile Groom</h3>
+            <div class="amount">R350+</div>
+            <p>At-home convenience</p>
+            <ul>
+              <li>✓ Grooming at home</li>
+              <li>✓ Convenient booking</li>
+              <li>✓ Less travel stress</li>
+              <li>✓ Service confirmation</li>
+            </ul>
+            <a href="booking.html" class="btn btn-primary">Book</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section class="booking" id="contact">
+
+      <div class="booking-box">
+
+        <h2>Ready to pamper your pet? 🐾</h2>
+
+        <p>
+          Book your pet's next grooming appointment today.
+        </p>
+
+        <div class="booking-buttons">
+
+          <a href="booking.html" class="btn white-btn">
+            📅 Book Online
+          </a>
+
+          <a
+            href="https://wa.me/27688685355?text=Hi%20PawPerfect%20Grooming,%20I%20would%20like%20to%20book%20a%20pet%20grooming%20appointment."
+            class="btn whatsapp-btn"
+            target="_blank"
+          >
+            💬 WhatsApp Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>🐾 PawPerfect Grooming</h3>
+        <p>
+          Professional grooming for dogs and cats, with convenient
+          booking and mobile grooming options.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Prices</a>
+        <a href="booking.html">Book Now</a>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <a href="#services">Dog Grooming</a>
+        <a href="#services">Cat Grooming</a>
+        <a href="#services">Puppy Grooming</a>
+        <a href="#services">Mobile Grooming</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+27688685355">📞 068 868 5355</a>
+        <a
+          href="https://wa.me/27688685355"
+          target="_blank"
+        >
+          💬 WhatsApp
+        </a>
+        <p>📍 South Africa</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 PawPerfect Grooming. All rights reserved.
+    </div>
+
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("show");
+      });
+    });
+  </script>
+
+</body>
+</html>
